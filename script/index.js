@@ -3,18 +3,20 @@
 async function main() {
 
     
+   try {
+       
     const response = await fetch ('https://swapi.dev/api/people');
 
     console.log(response)
 
     const {results}= await response.json();
-    let cardInfo = ''
+    let cardInfo = ``
     for (let i = 0; i < results.length; i++) {
         cardInfo += `
         <div class="col-sm-4">
         <div class="card cardcc">
         <div class="user-image-container text-center card-img-top">
-            <img src="images/${i+1}.jpeg" alt="" style="width: 200px; border-radius: 50%; height: 200px;"></img>
+            <img src="images/${i+1}.jpeg" alt="results[i].name" style="width: 200px; border-radius: 50%; height: 200px;"></img>
         </div>
 
         <div class="user-text-container">
@@ -40,6 +42,14 @@ async function main() {
     const container = document.querySelector(".row");
     container.innerHTML = cardInfo
 
+
+
+
+
+} catch (error) {
+    console.error(error.message)
+}
+
     
     
 };
@@ -56,4 +66,8 @@ function showInfo (id) {
         infoDiv.style.display = "none"
     }
 }
+    val = String(new Date())
 
+    console.log(val.length)
+
+    
