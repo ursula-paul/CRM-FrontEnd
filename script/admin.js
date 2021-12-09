@@ -36,9 +36,6 @@ getProduct().then(data => {
             <td>${fullname}</td>
             <td>${email}</td>
             <td>${gender}</td>
-            <td>${phone}</td>
-            <td>${address}</td>
-            <td>${notes}</td>
             <td data-id='${id}'> 
             <a href="edit-customer.html?id=${id}" class="btn btn-primary">
 
