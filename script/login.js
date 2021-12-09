@@ -67,6 +67,11 @@ async function login() {
         // alert notification
         alert('Account created')
     }
+    if(result.message=='Account Already exist'){
+        // alert notification
+        alert('Account Already exist')
+    }
+
   }
 
 
