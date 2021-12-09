@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Wars </title>
-    <meta name="title" content="star wars ">
-    <meta name="description" content="star wars movie  characters">
+    <title>CRM </title>
+    <meta name="title" content="Customer Relationship Management">
+    <meta name="description" content="Customer Relationship Management">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://metatags.io/">
-    <meta property="og:title" content="star wars ">
-    <meta property="og:description" content="star wars movie  characters ">
+    <meta property="og:title" content="CRM">
+    <meta property="og:description" content="Customer Relationship Management">
     <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://metatags.io/">
-    <meta property="twitter:title" content="star wars ">
-    <meta property="twitter:description" content="star wars movie  characters ">
+    <meta property="twitter:title" content="CRM">
+    <meta property="twitter:description" content="Customer Relationship Management ">
     <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
 
 
@@ -44,22 +44,61 @@ rel="stylesheet"
 </head>
 <body class="">
     
-    <header class="header bg-dark">
-        <br>
-        <h1 class="header-text text-center bg-dark text-light">STAR WARS</h1>
-        <h5 class="sub-text fw-larger text-light">Click to view you favorite character</h5>
-        <br>
-    </header>
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Container wrapper -->
+    <div class="container">
+      <!-- Navbar brand -->
+      <a class="navbar-brand text-light" href="index.html">
+          <h3>
+              CRM
+          </h3>
+        </a>
+  
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarButtonsExample"
+        aria-controls="navbarButtonsExample"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarButtonsExample">
+
+  
+        <div class="d-flex align-items-center">
+        <a class="nav-link active" href="admin.html">      
+          <button class="btn btn-primary px-3 me-2">Edit Customer</button>
+        </a>
+          <button class="btn btn-danger me-3" onclick="logout()">Logout</button>
+        </div>
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+
     <br>
     <!--start section tag-->
 
     <section class="container bgport">
-        <div class="row text-center">
+        <div class="row text-center" id="maincontent">
         </div>
     </section>
 
         <!--end section tag-->
 
     <script src="script/index.js"></script>
+    <script src="./script/login.js"></script>
 </body>
 </html>

@@ -1,0 +1,10 @@
+.navmecolor{
+    background-color: black; 
+}
+.row{
+    columns: 10;
+}
+
+.row mb-4{
+    margin-bottom: 4px;
+}

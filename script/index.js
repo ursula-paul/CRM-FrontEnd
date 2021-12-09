@@ -4,12 +4,23 @@ async function main() {
 
     
    try {
-       
-    const response = await fetch ('https://swapi.dev/api/people');
+    let myToken=localStorage.getItem(`ursula`)
+    if (!myToken) {
+      window.location.href="login.html"
+    }
+    let response = await fetch(
+      "https://crm-management-system.herokuapp.com",
+        {
+          headers: {
+            'Authorization': `Bearer ${myToken}`
+         },
+          method:"GET"
+        },
+      );
 
     console.log(response)
 
-    const {results}= await response.json();
+    const results= await response.json();
     let cardInfo = ``
     for (let i = 0; i < results.length; i++) {
         cardInfo += `
@@ -20,16 +31,17 @@ async function main() {
         </div>
 
         <div class="user-text-container">
-            <h2><button onclick="showInfo('info${i}')" class="user-name btn btn-success" id="get-text">${results[i].name}</button></h2>
+            <h2><button onclick="showInfo('info${i}')" class="user-name btn btn-success" id="get-text">${results[i].fullname}</button></h2>
         </div>
         
         <div class="info text-center" id="info${i}" style="display:none">
         
-                <p>Name: ${ results[i].name === "n/a" ? 'humanoid' : results[i].name}</p>
-     
-                <p>Gender: ${ results[i].gender === "n/a" ? 'humanoid' : results[i].gender}</p>
-
-                <p>Height :${results[i].height} M</p>
+                <p>FullName: ${ results[i].fullname}</p>
+                <p>Email: ${ results[i].email}</p>
+                <p>Gender :${results[i].gender} </p>
+                <p>PhoneNo :${results[i].phone} </p>
+                <p>Adsress :${results[i].address} </p>
+                <p>Notes :${results[i].notes} </p>
             </tr>
         </div>
     </div>
@@ -39,11 +51,11 @@ async function main() {
         `
     }
     
-    const container = document.querySelector(".row");
+    const container = document.getElementById("maincontent");
     container.innerHTML = cardInfo
 
 
-
+    
 
 
 } catch (error) {
@@ -70,4 +82,13 @@ function showInfo (id) {
 
     console.log(val.length)
 
-    
+    class Human{
+        constructor(color,height){
+            this.color =color
+            this.heigh =height
+        }
+    }
+
+    let ursula =new Human('dark' , 'tall' , 'f');
+
+
