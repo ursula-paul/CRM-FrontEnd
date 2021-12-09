@@ -66,12 +66,13 @@ async function login() {
     if(result.message=='Account created'){
         // alert notification
         alert('Account created')
+        window.location.href='login.html'
     }
-    if(result.message=='Account Already exist'){
+    else{
         // alert notification
         alert('Account Already exist')
+        location.reload()
     }
-
   }
 
 
