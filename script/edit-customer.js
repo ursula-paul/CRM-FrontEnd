@@ -50,7 +50,6 @@ getProduct()
 
 // // update product
 async function updateCustomer(){
-    // let myToken=localStorage.getItem(`ursula`)
 
     let fullname= document.getElementById('up-fullname').value
     let email= document.getElementById('up-email').value

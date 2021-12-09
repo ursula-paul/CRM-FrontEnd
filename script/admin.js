@@ -114,24 +114,24 @@ data = {
   location.reload()
 }
 
-async function updateCustomer(id){
-  console.log('dffgfgfgffgf',id);
+// async function updateCustomer(id){
+//   console.log('dffgfgfgffgf',id);
 
-  let myToken=localStorage.getItem(`ursula`)
+//   let myToken=localStorage.getItem(`ursula`)
 
-  let upfullname=document.getElementById('up-fullname').value
-  console.log(upfullname);
+//   let upfullname=document.getElementById('up-fullname').value
+//   console.log(upfullname);
 
-  let response = await fetch(`https://crm-management-system.herokuapp.com/${id}`, 
-  {            
-    headers: {
-    'Authorization': `Bearer ${myToken}`
- },
-    method: 'PUT',
-    body: JSON.stringify(data)
-  })
-  let result = await response.json();
-  location.reload();
-}
+//   let response = await fetch(`https://crm-management-system.herokuapp.com/${id}`, 
+//   {            
+//     headers: {
+//     'Authorization': `Bearer ${myToken}`
+//  },
+//     method: 'PUT',
+//     body: JSON.stringify(data)
+//   })
+//   let result = await response.json();
+//   location.reload();
+// }
 
 
