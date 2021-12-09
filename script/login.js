@@ -76,7 +76,7 @@ async function login() {
   }
 
 
-  async function logout() {
+async function logout() {
     localStorage.removeItem('ursula')
     location.reload()
 }
